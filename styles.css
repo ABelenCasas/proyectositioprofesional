@@ -174,3 +174,20 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Efecto responsive */
+@media only screen and (max-width: 600px) {
+    .card {
+        width: calc(100% - 40px);
+    }
+
+    .service img {
+        width: calc(100% - 40px);
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .service .description {
+        max-width: calc(100% - 40px);
+    }
+}
