@@ -1,43 +1,101 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-image: url("img/fondo.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #333;
+    font-family: Arial, sans-serif;
 }
 
 /* Estilo del encabezado */
-.logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    z-index: 1000;
 }
 
-header nav ul {
+/* Logo de la empresa */
+.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Links dentro del menú de navegación */
+.navbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 17px;
+    transition: background-color 0.3s;
+}
+
+/* Agrupa las opciones del menú */
+.navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-header nav ul li {
+/* Menu en linea */
+.navbar li {
     display: inline;
-    margin-right: 20px;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+/* Cambia el color de fondo al pasar el ratón */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Inicio */
+.parallax {
+    background-image: url('img/background_inicio.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 400px;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Estilo para el sector acerca de */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    scroll-margin-top: 70px;
+}
+
+section h3 {
+    color: #333;
 }
 
 /* Estilo para todas las secciones */
