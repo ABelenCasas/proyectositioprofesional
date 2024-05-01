@@ -48,6 +48,8 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
 /* Estilo del menu en linea */
@@ -61,16 +63,17 @@ body {
     color: black;
 }
 
-/* Inicio */
+/* Inicio - Bienvenida */
 .parallax {
     background-image: url('img/background_inicio.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     min-height: 400px;
-    color: white;
+    color: var(--color-texto-claro);
     text-align: center;
-    padding-top: 100px;
+    padding-top: 300px;
+    font-size: 30px;
 }
 
 /* Estilo para el sector de acerca de */
@@ -129,7 +132,8 @@ section h3 {
     width: 700px;
     height: auto;
     border-radius: 10px;
-    margin-right: 40px;
+    margin-right: auto;
+    margin-left: auto;
     border: 2px solid var(--color-texto-claro);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -175,19 +179,43 @@ footer {
     padding: 10px;
 }
 
-/* Efecto responsive */
-@media only screen and (max-width: 600px) {
-    .card {
-        width: calc(100% - 40px);
+/* Estilos para dispositivos mobiles */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar li {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #servicios {
+        text-align: center;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin: 0 auto 40px;
     }
 
     .service img {
-        width: calc(100% - 40px);
-        margin-right: 0;
+        width: 100%;
         margin-bottom: 20px;
     }
 
     .service .description {
-        max-width: calc(100% - 40px);
+        flex: 1;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .service:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
     }
 }
